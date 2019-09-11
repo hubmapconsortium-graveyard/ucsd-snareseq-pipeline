@@ -31,7 +31,7 @@ do
   done
 
   rm -r ${f}_deindexed_fastq
-   
+
 done
 
 
@@ -50,4 +50,4 @@ done
 
 merge_and_map.pl $genome_mmi $genome_csize $genome_name < master_file_list &> merge_and_map.log
 
- 
+

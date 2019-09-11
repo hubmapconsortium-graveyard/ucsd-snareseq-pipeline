@@ -24,7 +24,7 @@ $star_dir/STAR --genomeDir $star_index --readFilesCommand cat --outSAMtype BAM U
 rm ${file_id}.tagged.merged.fastq
 
 mv ${file_id}.Aligned.out.bam ${file_id}.out.bam
-  
+
 cd ../03_dropEst_${file_id}
 $dropest_dir/dropest -w -M -u -G 1 -L iIeEBA -u -m -F -g $gtf_file -c $config_file -o ${file_id} ../02_alignment_${file_id}/${file_id}.out.bam
 

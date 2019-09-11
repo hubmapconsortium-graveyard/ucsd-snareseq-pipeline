@@ -30,7 +30,7 @@ do
      do
         cat ${f}_deindexed_fastq/*_${barcode}_R1.fastq >> by_samples_fastq/${sample}.${f}_R1.fastq
         cat ${f}_deindexed_fastq/*_${barcode}_R2.fastq >> by_samples_fastq/${sample}.${f}_R2.fastq
-     
+
      done
 
      dropEst_SeqToRDS.sh by_samples_fastq/${sample}.${f}_R1.fastq by_samples_fastq/${sample}.${f}_R2.fastq $star_index $gtf_file ${sample}.${f}

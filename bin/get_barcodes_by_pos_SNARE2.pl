@@ -45,9 +45,9 @@ while(my $r1_1 = <R1>){
   my $r3_2 = <R3>;
   my $r3_3 = <R3>;
   my $r3_4 = <R3>;
-  
+
   my @fields = split / /, $r1_1;
-  
+
   #my $barcode4_and_1 = $fields[1];
   #$barcode4_and_1 =~ s/1:N:0://g;
   #chomp($barcode4_and_1);
@@ -56,15 +56,15 @@ while(my $r1_1 = <R1>){
   #  $barcode4 = revComp($barcode4);
   #}
   #my $barcode1 = substr($barcode4_and_1, 8, 8);
-  
+
   my $barcode1 = substr($r2_2, 0, 8);
   my $barcode2 = substr($r2_2, 38, 8);
   my $barcode3 = substr($r2_2, 76, 8);
   my $umi = substr($r2_2, 84, 10);
-  
+
   $r1_1=~ s/@//g;
   $r3_1=~ s/@//g;
-  
+
   #my $cell_barcode = $barcode1 . $barcode2 . $barcode3 . $barcode4;
   my $cell_barcode = $barcode1 . $barcode2 . $barcode3;
   my $rc_cell_barcode = revComp($cell_barcode);
