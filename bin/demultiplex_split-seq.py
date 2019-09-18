@@ -23,16 +23,14 @@ def main():
     n_mismatch = 2
 
     ## Split out index files and generate config
-    print "Splitting index file..."
+    print("Splitting index file...")
     split_index(read2_fastq_file, out_prefix + ".Round1", 86, 94)
 
     ## Run deindexer
-    print "Running fastq deindexing..."
+    print("Running fastq deindexing...")
     run_deindexer(out_prefix, read1_fastq_file, read2_fastq_file, index_list, index_cfg, n_mismatch)
 
-    print "Time elapsed:\t" + str(time.time() - start)
-
-
+    print("Time elapsed:\t" + str(time.time() - start))
 
 
 def run_deindexer(out_file_prefix, read1_fastq_file, read2_fastq_file, index_list, index_cfg, n_mismatch = 1):
@@ -46,10 +44,8 @@ def run_deindexer(out_file_prefix, read1_fastq_file, read2_fastq_file, index_lis
         " " + read2_fastq_file + " " + \
         out_file_prefix + ".Round1.idx.fastq "
 
-    print deindexer_cmd
+    print(deindexer_cmd)
     sp.call("ulimit -n 500000; " + deindexer_cmd, shell = True)
-
-
 
 
 def split_index(idx_file, out_file_prefix, start_idx, stop_idx):
@@ -63,4 +59,5 @@ def split_index(idx_file, out_file_prefix, start_idx, stop_idx):
     f_out.close()
 
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    main()
