@@ -13,8 +13,6 @@ inputs:
     type: File[]
     inputBinding:
       position: 1
-  out_filename_prefix:
-    type: string
 stdout: merged.fastq
 outputs:
   merged_fastq:

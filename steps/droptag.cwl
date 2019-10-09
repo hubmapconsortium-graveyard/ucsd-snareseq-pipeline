@@ -10,11 +10,11 @@ arguments:
   - "-c"
   - /opt/dropEst/configs/split_seq.xml
 inputs:
-  file_r2:
+  fastq_r2:
     type: File
     inputBinding:
       position: 0
-  file_r1:
+  fastq_r1:
     type: File
     inputBinding:
       position: 1
