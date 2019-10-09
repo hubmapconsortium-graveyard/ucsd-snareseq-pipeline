@@ -53,17 +53,17 @@ steps:
       - id: fastq_file
         source: concat_fastq_gz/merged_fastq
       - id: out_filename_prefix
-        source: $(fastq_r1.basename)
+        valueFrom: $(inputs.fastq_r1.basename)
     out:
       - bam_file
-    run: steps/filter_normalize.cwl
+    run: steps/star.cwl
     label: Additional filtering and normalization
   - id: dropest
     in:
       - id: bam_file
         source: star/bam_file
       - id: file_id
-        source: $(fastq_r1.basename)
+        valueFrom: $(inputs.fastq_r1.basename)
     out:
       - tsv_output
       - rds_output
