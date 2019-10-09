@@ -10,14 +10,19 @@ arguments:
   - "-c"
   - /opt/dropEst/configs/split_seq.xml
 inputs:
+  threads:
+    type: int
+    inputBinding:
+      position: 0
+      prefix: "--parallel"
   fastq_r2:
     type: File
     inputBinding:
-      position: 0
+      position: 1
   fastq_r1:
     type: File
     inputBinding:
-      position: 1
+      position: 2
 outputs:
   droptag_output:
     type: File[]

@@ -34,6 +34,8 @@ steps:
         source: fastq_r1
       - id: fastq_r2
         source: fastq_r2
+      - id: threads
+        source: threads
     out:
       - droptag_output
     run: steps/droptag.cwl
