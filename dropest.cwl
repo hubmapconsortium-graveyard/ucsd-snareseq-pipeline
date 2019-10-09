@@ -2,6 +2,8 @@
 
 class: Workflow
 cwlVersion: v1.0
+requirements:
+  StepInputExpressionRequirement: {}
 label: dropEst pipeline
 inputs:
   fastq_r1:
