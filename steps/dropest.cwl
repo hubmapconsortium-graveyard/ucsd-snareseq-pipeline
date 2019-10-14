@@ -25,6 +25,8 @@ arguments:
 inputs:
   bam_file:
     type: File
+    inputBinding:
+      position: 1
 outputs:
   tsv_output:
     type: File[]
