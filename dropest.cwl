@@ -17,6 +17,10 @@ inputs:
     type: int
     default: 1
 outputs:
+  bam_file:
+    outputSource: star/bam_file
+    type: File
+    label: "Aligned reads"
   tsv_output:
     outputSource: dropest/tsv_output
     type: File[]
