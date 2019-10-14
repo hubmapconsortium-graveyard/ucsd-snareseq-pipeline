@@ -20,11 +20,9 @@ arguments:
   - /opt/refdata-cellranger-GRCh38-3.0.0/genes/genes.gtf
   - "-c"
   - /opt/dropEst/configs/split_seq.xml
+  - prefix: "-o"
+    valueFrom: $(inputs.bam_file.nameroot)
 inputs:
-  file_id:
-    type: string
-    inputBinding:
-      prefix: "-o"
   bam_file:
     type: File
 outputs:

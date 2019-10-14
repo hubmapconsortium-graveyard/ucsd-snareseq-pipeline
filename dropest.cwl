@@ -60,8 +60,6 @@ steps:
         source: threads
       - id: fastq_file
         source: concat_fastq_gz/merged_fastq
-      - id: out_filename_prefix
-        valueFrom: $(inputs.fastq_r1.basename)
     out:
       - bam_file
     run: steps/star.cwl
@@ -70,8 +68,6 @@ steps:
     in:
       - id: bam_file
         source: star/bam_file
-      - id: file_id
-        valueFrom: $(inputs.fastq_r1.basename)
     out:
       - tsv_output
       - rds_output

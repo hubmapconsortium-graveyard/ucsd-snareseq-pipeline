@@ -14,6 +14,8 @@ arguments:
   - "--outSAMtype"
   - BAM
   - Unsorted
+  - prefix: "--outFileNamePrefix"
+    valueFrom: $(inputs.fastq_file.nameroot).
 inputs:
   threads:
     type: int
@@ -24,10 +26,6 @@ inputs:
     type: File
     inputBinding:
       prefix: "--readFilesIn"
-  out_filename_prefix:
-    type: string
-    inputBinding:
-      prefix: "--outFileNamePrefix"
 outputs:
   bam_file:
     type: File
