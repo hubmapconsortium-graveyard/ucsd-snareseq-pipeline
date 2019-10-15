@@ -1,0 +1,11 @@
+{
+    "fastq_r1": {
+        "class": "File",
+        "path": "/data/BUKMAP_20190131_B.N501N701_R1.fastq.gz"
+     },
+    "fastq_r2": {
+        "class": "File",
+        "path": "BUKMAP_20190131_B.N501N701_R2.fastq.gz"
+    },
+    "threads": 4
+}
